@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tsikllari</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+    <div class="video-container">
+        <video id="background-video" autoplay loop muted>
+            <source src="assets/mylivewallpapers-com-Vinland-Saga-4K.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content">
+        <h1>JavaScript Tsikllari</h1>
+        <section class="intro">
+            <audio src="assets/Sn7pE6tJINvi.128.mp3" autoplay loop controls>
+                Your browser does not support the <code>audio</code> element.
+            </audio>
+            <h2>Kirish</h2>
+            <p>Ushbu uy vazifasida JavaScript tilida "for" va "while" tsikllarini o‘rganamiz. Quyida har bir vazifa uchun batafsil tushuntirishlar va misollar keltirilgan.</p>
+            <button class="button" onclick="scrollToSection('for-loops')">For Tsikl Vazifalari</button>
+            <button class="button" onclick="scrollToSection('while-loops')">While Tsikl Vazifalari</button>
+        </section>
+        <div class="sections">
+            <section id="for-loops" class="loops">
+                <h2>"For" Tsikl Vazifalari</h2>
+                <div class="task">
+                    <h3>Vazifa 1</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, <code>k</code> qiymatini <code>n</code> marta chop etish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>k</code> o‘zgaruvchisi 5 ga teng va <code>n</code> o‘zgaruvchisi 3 ga teng. Tsikl <code>k</code> ni <code>n</code> marta chop etadi.</p>
+                    <pre><code>let k = 5;
+let n = 3;
+
+for (let i = 0; i &lt; n; i++) {
+  console.log(k);
+}</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 2</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, <code>a</code> dan <code>b</code> gacha bo‘lgan butun sonlarni chop etish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>a</code> o‘zgaruvchisi 2 ga teng va <code>b</code> o‘zgaruvchisi 6 ga teng. Tsikl <code>a</code> dan <code>b</code> gacha bo‘lgan sonlarni chop etadi va necha son borligini hisoblaydi.</p>
+                    <pre><code>let a = 2;
+let b = 6;
+let count = 0;
+
+console.log("Butun sonlar:");
+
+for (let i = a; i &lt;= b; i++) {
+  console.log(i);
+  count++;
+}
+
+console.log("Chiqarilgan sonlar soni:", count);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 3</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, <code>b</code> dan <code>a</code> gacha bo‘lgan sonlarni chop etish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>a</code> o‘zgaruvchisi 2 ga teng va <code>b</code> o‘zgaruvchisi 6 ga teng. Tsikl <code>b</code> dan <code>a</code> gacha bo‘lgan sonlarni chop etadi.</p>
+                    <pre><code>let a = 2;
+let b = 6;
+
+for (let i = b; i &gt;= a; i--) {
+  console.log(i);
+}</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 4</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, 1 kg dan 10 kg gacha bo‘lgan har bir kilogramm uchun narxni chop etish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>price</code> o‘zgaruvchisi 2 ga teng. Tsikl 1 kg dan 10 kg gacha bo‘lgan har bir kilogramm uchun narxni chop etadi.</p>
+                    <pre><code>let price = 2;
+
+for (let i = 1; i &lt;= 10; i++) {
+  console.log(i + " kg = " + i * price);
+}</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 5</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, 0.1 kg dan 1 kg gacha bo‘lgan har bir kilogramm uchun narxni chop etish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>price</code> o‘zgaruvchisi 2 ga teng. Tsikl 0.1 kg dan 1 kg gacha bo‘lgan har bir kilogramm uchun narxni chop etadi.</p>
+                    <pre><code>let price = 2;
+
+for (let i = 0.1; i &lt;= 1; i += 0.1) {
+  console.log(i.toFixed(1) + " kg = " + i * price);
+}</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 6</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, 1.2 kg dan 2 kg gacha bo‘lgan har bir kilogramm uchun narxni chop etish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>price</code> o‘zgaruvchisi 2 ga teng. Tsikl 1.2 kg dan 2 kg gacha bo‘lgan har bir kilogramm uchun narxni chop etadi.</p>
+                    <pre><code>let price = 2;
+
+for (let i = 1.2; i &lt;= 2; i += 0.2) {
+  console.log(i.toFixed(1) + " kg = " + i * price);
+}</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 7</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, <code>a</code> dan <code>b</code> gacha bo‘lgan sonlarning yig‘indisini hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>a</code> o‘zgaruvchisi 2 ga teng va <code>b</code> o‘zgaruvchisi 6 ga teng. Tsikl <code>a</code> dan <code>b</code> gacha bo‘lgan sonlarning yig‘indisini hisoblaydi va natijani <code>sum</code> o‘zgaruvchida saqlaydi.</p>
+                    <pre><code>let a = 2;
+let b = 6;
+let sum = 0;
+
+for (let i = a; i &lt;= b; i++) {
+  sum += i;
+}
+
+console.log("Sum =", sum);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 8</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, <code>a</code> dan <code>b</code> gacha bo‘lgan sonlarning ko‘paytmasini hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>a</code> o‘zgaruvchisi 2 ga teng va <code>b</code> o‘zgaruvchisi 6 ga teng. Tsikl <code>a</code> dan <code>b</code> gacha bo‘lgan sonlarning ko‘paytmasini hisoblaydi va natijani <code>product</code> o‘zgaruvchida saqlaydi.</p>
+                    <pre><code>let a = 2;
+let b = 6;
+let product = 1;
+
+for (let i = a; i &lt;= b; i++) {
+  product *= i;
+}
+
+console.log("Product =", product);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 9</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, <code>a</code> dan <code>b</code> gacha bo‘lgan sonlarning kvadratlarining yig‘indisini hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>a</code> o‘zgaruvchisi 2 ga teng va <code>b</code> o‘zgaruvchisi 6 ga teng. Tsikl <code>a</code> dan <code>b</code> gacha bo‘lgan sonlarning kvadratlarining yig‘indisini hisoblaydi va natijani <code>sumOfSquares</code> o‘zgaruvchida saqlaydi.</p>
+                    <pre><code>let a = 2;
+let b = 6;
+let sumOfSquares = 0;
+
+for (let i = a; i &lt;= b; i++) {
+  sumOfSquares += i * i;
+}
+
+console.log("Sum of squares =", sumOfSquares);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 10</h3>
+                    <p><strong>Masala:</strong> "for" tsiklidan foydalanib, <code>n</code> qiymatining harmonik yig‘indisini hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 5 ga teng. Tsikl 1 dan <code>n</code> gacha bo‘lgan harmonik sonlarni yig‘adi va natijani <code>sum</code> o‘zgaruvchida saqlaydi.</p>
+                    <pre><code>let n = 5;
+let sum = 0;
+
+for (let i = 1; i &lt;= n; i++) {
+  sum += 1 / i;
+}
+
+console.log("Sum =", sum);</code></pre>
+                </div>
+
+                <button class="button" onclick="scrollToSection('while-loops')">Keyingi</button>
+            </section>
+
+            <section id="while-loops" class="loops">
+                <h2>"While" Tsikl Vazifalari</h2>
+
+                <div class="task">
+                    <h3>Vazifa 1</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>A</code> qiymatidan <code>B</code> qiymatini kamaytirish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>A</code> o‘zgaruvchisi 20 ga teng va <code>B</code> o‘zgaruvchisi 6 ga teng. Tsikl <code>A</code> qiymatini <code>B</code> qiymatini kamaytiradi va qolgan qiymatni chop etadi.</p>
+                    <pre><code>let A = 20;
+let B = 6;
+
+while (A &gt;= B) {
+  A -= B;
+}
+
+console.log("Remaining:", A);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 2</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>A</code> qiymatini <code>B</code> qiymatini kamaytirib, necha marta kamaytirganini hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>A</code> o‘zgaruvchisi 20 ga teng va <code>B</code> o‘zgaruvchisi 6 ga teng. Tsikl <code>A</code> qiymatini <code>B</code> qiymatini kamaytirib, qancha marta kamaytirganini hisoblaydi.</p>
+                    <pre><code>let A = 20;
+let B = 6;
+let count = 0;
+
+while (A &gt;= B) {
+  A -= B;
+  count++;
+}
+
+console.log("Segments:", count);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 3</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>N</code> qiymatidan <code>K</code> ga bo‘lingan qoldiqni hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>N</code> o‘zgaruvchisi 17 ga teng va <code>K</code> o‘zgaruvchisi 5 ga teng. Tsikl <code>N</code> qiymatini <code>K</code> ga bo‘lib, natijani <code>quotient</code> va qoldiqni chop etadi.</p>
+                    <pre><code>let N = 17;
+let K = 5;
+let quotient = 0;
+
+while (N &gt;= K) {
+  N -= K;
+  quotient++;
+}
+
+console.log("Quotient:", quotient);
+console.log("Remainder:", N);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 4</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>n</code> qiymatini 3 ning darajasiga teng bo‘lishi uchun tekshirish.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 27 ga teng. Tsikl <code>n</code> qiymatini 3 ning darajasiga tengligini tekshiradi va natijani chop etadi.</p>
+                    <pre><code>let n = 27;
+let result = "3 - ning darajasi emas";
+
+while (n &gt; 1) {
+  if (n % 3 !== 0) break;
+  n /= 3;
+  if (n == 1) result = "3 - ning darajasi";
+}
+
+console.log(result);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 5</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>n</code> qiymatining 2 ning darajasiga teng bo‘lishi uchun eng kichik <code>k</code> ni hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 16 ga teng. Tsikl <code>n</code> qiymatini 2 ning darajasiga teng bo‘lishi uchun eng kichik <code>k</code> ni hisoblaydi.</p>
+                    <pre><code>let n = 16;
+let k = 0;
+let power = 1;
+
+while (power &lt; n) {
+  power *= 2;
+  k++;
+}
+
+console.log("k =", k);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 6</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>n</code> qiymatining juft faktorialini hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 5 ga teng. Tsikl <code>n</code> qiymatining juft faktorialini hisoblaydi va natijani chop etadi.</p>
+                    <pre><code>let n = 5;
+let result = 1;
+
+while (n &gt; 1) {
+  result *= n;
+  n -= 2;
+}
+
+console.log("n!! =", result);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 7</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>n</code> qiymatining kvadratini topish uchun eng kichik <code>k</code> ni hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 17 ga teng. Tsikl <code>n</code> qiymatining kvadratini topish uchun eng kichik <code>k</code> ni hisoblaydi.</p>
+                    <pre><code>let n = 17;
+let k = 0;
+
+while (k * k &lt; n) {
+  k++;
+}
+
+console.log("k =", k);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 8</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>n</code> qiymatining kvadratidan katta bo‘lgan eng kichik <code>k</code> ni hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 17 ga teng. Tsikl <code>n</code> qiymatining kvadratidan katta bo‘lgan eng kichik <code>k</code> ni hisoblaydi.</p>
+                    <pre><code>let n = 17;
+let k = 0;
+
+while (k * k &lt;= n) {
+  k++;
+}
+
+console.log("k =", k - 1);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 9</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>n</code> qiymatiga teng bo‘lgan yoki katta bo‘lgan eng kichik <code>k</code> ni hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 30 ga teng. Tsikl <code>n</code> qiymatiga teng yoki katta bo‘lgan eng kichik <code>k</code> ni hisoblaydi.</p>
+                    <pre><code>let n = 30;
+let k = 0;
+let power = 1;
+
+while (power &lt;= n) {
+  power *= 3;
+  k++;
+}
+
+console.log("k =", k - 1);</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Vazifa 10</h3>
+                    <p><strong>Masala:</strong> "while" tsiklidan foydalanib, <code>n</code> qiymatiga teng yoki katta bo‘lgan eng kichik <code>k</code> ni hisoblash.</p>
+                    <p><strong>Yechim:</strong> Kodda <code>n</code> o‘zgaruvchisi 30 ga teng. Tsikl <code>n</code> qiymatiga teng yoki katta bo‘lgan eng kichik <code>k</code> ni hisoblaydi.</p>
+                    <pre><code>let n = 30;
+let k = 0;
+let power = 1;
+
+while (power &lt;= n) {
+  power *= 3;
+  k++;
+}
+
+console.log("k =", k - 1);</code></pre>
+                </div>
+
+                <button class="button" onclick="scrollToSection('for-loops')">Ortga</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
