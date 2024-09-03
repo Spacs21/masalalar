@@ -270,7 +270,4 @@ function scrollToSection(sectionId) {
   }
 }
 
-window.addEventListener('load', () => {
-  const audio = document.getElementById('audio');
-  audio.volume = 0.3; // Set the default volume to 30%
-});
+
